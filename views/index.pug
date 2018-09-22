@@ -1,6 +1,27 @@
 extends layout
 
-block content
-  h1= title
-  p Welcome to #{title}
-  <div class="name">hello</div>
+block landing-header
+	<header class="header">
+		<a herf="#" class="header__turnover" onClick="changeTextOver()">
+			<i class="fas fa-angle-right fa-7x"></i>
+			<h1 class="who">Who's she?</h1>
+		</a>
+		<div class="header__side header__side--front">
+			<div class="header__text-box header__text-box--left">
+				<h1 class="heading-slogan u-margin-left-neg">Ziyue Hu</h1>
+				<h1 class="heading-slogan--yellow u-margin-left-neg">Not</h1>
+				<h1 class="heading-slogan--yellow u-margin-left-neg">Your Average</h1>
+				<h1 class="heading-slogan u-margin-left-neg">Software Engineer</h1>
+			</div>
+			<div class="header__text-box header__text-box--right">
+				<h1 class="heading-slogan">Ziyue</h1>
+				<h1 class="heading-slogan--yellow">Not</h1>
+				<h1 class="heading-slogan--yellow">Your Average</h1>
+				<h1 class="heading-slogan">Software Engineer</h1>
+			</div>
+		</div>
+		<div class="header__side header__side--back">
+		</div>
+
+	</header>
+

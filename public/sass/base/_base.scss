@@ -1,0 +1,21 @@
+/*Universal selector will seelct each and every element on the page and then apply these declarations here to it*/
+
+*,
+*::after,
+*::before {
+    /* margin: are used to create space around elements, outside of any defined borders.*/
+    margin: 0;
+    /* padding: are used to generate space around an element's content, inside of any defined borders.*/
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    /* box-sizing: border-box: change the box model so that the borders and the paddings are no longer added to the total width or the total height that we specify for a box*/
+    box-sizing: border-box;
+}
+
+html {
+    // this define what 1rem is
+    font-size: 62.5%;
+}

@@ -9,6 +9,20 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+// // Import the mongoose module
+// var mongoose = require('mongoose');
+// // Set up default mongoose connection
+// var mongoDB = 'mongodb://<username>:<password>@ds161322.mlab.com:61322/local_library';
+// mongoose.connect(mongoDB);
+// // Get Mongoose to use the global promise library
+// mongoose.Promise = global.Promise;
+// // Get the default connection
+// var db = mongoose.connection;
+// //Bind connection to error event (to get notification of connection errors)
+// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -21,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
