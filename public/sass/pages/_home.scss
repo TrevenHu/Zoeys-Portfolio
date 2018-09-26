@@ -1,0 +1,13 @@
+.section-project{
+	height: 100vh;
+	width: 100%;
+	padding: 10rem 5rem;
+	display: none;
+	position: relative;
+	overflow: hidden;
+	animation: none;
+	background-image: linear-gradient(105deg,
+        rgba($color-blue-maya, .9) 0%, 
+        rgba($color-blue-maya, .9) 45%,
+        $color-yellow-laguna 45%)
+}

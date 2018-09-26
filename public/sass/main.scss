@@ -2,5 +2,15 @@
 
 @import "base/base";
 @import "base/utilities";
+@import "base/animations";
+
 
 @import "layout/header";
+@import "layout/navigation";
+
+@import "pages/home";
+
+@import "components/display-box";
+@import "components/text-animation";
+@import "components/flying-birds";
+@import "components/paper-plane";

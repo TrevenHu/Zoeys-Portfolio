@@ -1,13 +1,25 @@
 extends layout
 
+block navigation
+	<div class="navigation">
+		<input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+		<label for="navi-toggle" class="navigation__button">
+			<span class="navigation__icon">&nbsp;</span>
+		</label>
+		<div class="navigation__background">&nbsp;</div>
+		<nav class="navigation__nav">
+			<ul class="navigation__list">
+				<li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Me</a></li>
+				<li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Potforlio</a></li>
+				<li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Resume</a></li>
+				<li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Contact Me</a></li>
+			</ul>
+		</nav>
+	</div>
 block landing-header
 	<header class="header">
-		<a herf="#" class="header__turnover" onClick="changeTextOver()">
-			<i class="fas fa-angle-right fa-7x"></i>
-			<h1 class="who">Who's she?</h1>
-		</a>
 		<div class="header__side header__side--front">
-			<div class="header__text-box header__text-box--left">
+			<!-- <div class="header__text-box header__text-box--left">
 				<h1 class="heading-slogan u-margin-left-neg">Ziyue Hu</h1>
 				<h1 class="heading-slogan--yellow u-margin-left-neg">Not</h1>
 				<h1 class="heading-slogan--yellow u-margin-left-neg">Your Average</h1>
@@ -18,10 +30,159 @@ block landing-header
 				<h1 class="heading-slogan--yellow">Not</h1>
 				<h1 class="heading-slogan--yellow">Your Average</h1>
 				<h1 class="heading-slogan">Software Engineer</h1>
+			</div> -->
+
+			<div class="container">
+	
+				<div class="bird-container bird-container--one">
+					<div class="bird bird--one"></div>
+				</div>
+				
+				<div class="bird-container bird-container--two">
+					<div class="bird bird--two"></div>
+				</div>
+				
+				<div class="bird-container bird-container--three">
+					<div class="bird bird--three"></div>
+				</div>
+				
+				<div class="bird-container bird-container--four">
+					<div class="bird bird--four"></div>
+				</div>
+				<svg viewBox="0 0 1418 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="name">
+					<g stroke="none" fill="none" fill-rule="evenodd" fill-opacity="0">
+						<text id="ZiyueHu" stroke="#fff" fill="#645F5A" font-weight="normal" font-family="PermanentMarker-Regular, Permanent Marker" font-size="144">
+							<tspan x="3" y="109">
+								<tspan>Z</tspan>
+								<tspan>i</tspan>
+								<tspan>y</tspan>
+								<tspan>u</tspan>
+								<tspan>e</tspan>
+								<tspan>&nbsp;</tspan>
+								<tspan>H</tspan>
+								<tspan>u</tspan>
+							</tspan>
+						</text>
+					</g>
+				</svg>
+				<div class="container-plane" onClick="changeTextOver()">
+					<div id="lside"></div>
+					<div id="rside"></div>
+					<div id="lwing"></div>
+					<div id="rwing"></div>
+				</div>
+				
+				<svg viewBox="0 0 1418 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="intro">
+					<g stroke="none" fill="none" fill-rule="evenodd" fill-opacity="0">
+						<text id="ddd" stroke="#fff" fill="#645F5A" font-weight="normal" font-family="PermanentMarker-Regular, Permanent Marker" font-size="44">
+							<tspan x="3" y="109">
+								<tspan>D</tspan>
+								<tspan>e</tspan>
+								<tspan>v</tspan>
+								<tspan>e</tspan>
+								<tspan>l</tspan>
+								<tspan>o</tspan>
+								<tspan>p</tspan>
+								<tspan>e</tspan>
+								<tspan>r</tspan>
+								<tspan>&nbsp;</tspan>
+								<tspan>D</tspan>
+								<tspan>e</tspan>
+								<tspan>s</tspan>
+								<tspan>i</tspan>
+								<tspan>g</tspan>
+								<tspan>n</tspan>
+								<tspan>e</tspan>
+								<tspan>r</tspan>
+								<tspan>&nbsp;</tspan>
+								<tspan>D</tspan>
+								<tspan>r</tspan>
+								<tspan>e</tspan>
+								<tspan>a</tspan>
+								<tspan>m</tspan>
+								<tspan>e</tspan>
+								<tspan>r</tspan>
+							</tspan>
+						</text>
+					</g>
+				</svg>
 			</div>
+
+
+
+
 		</div>
 		<div class="header__side header__side--back">
+			<div class="header__intro-box">
+				<h1 class="heading-intro">Hi. I'm Ziyue</h1>
+				<h1 class="heading-intro">a graduate student at UC San Diego</h1>
+				<h1 class="heading-intro">with major in Computer Science.</h1>
+				<h1 class="heading-intro">I'll be graduating in December'18.</h1>	
+			</div>
+			<div class="header__details">
+				<p class="introduction">I'm passionate about building easy to use, user-friendly websites and applications. My best assets are my creativity, my feeling with technology and my passion. </p>
+			</div>
 		</div>
-
+		<div class="next-page-arrow" onclick="smoothScroll()"><i class="bounce fas fa-angle-down fa-3x"></i></div>
 	</header>
+block section-project
+	<main>
+		<section class="section-project">
+			<div class="dotstyle dotstyle-tooltip u-text-centered u-margin-bottom-small">
+				<ul>
+					<li class="current" id="anchor-natours"><a href="#">Natours</a></li>
+					<li id="anchor-yelpdemo"><a href="#">YelpDemo</a></li>
+					<li id="anchor-little-things"><a href="#">Little Things</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			
+			<div class="project-box" id="natours">
+				<div class="next-arrow right-next" onclick="nextProject('natours')">
+					<i class="fas fa-angle-right fa-7x"></i>
+				</div>
+				<div class="next-arrow left-next" onclick="prevProject('natours')">
+					<i class="fas fa-angle-left fa-7x"></i>
+				</div>
+				<div class="display-box" onclick="navToProject('natours')">
+					<div class="display-box__textbox">
+						<h3 class="project-title">Natours</h3>
+						<p class="project-key">CSS3, SASS, HTML5</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-box" id="yelpdemo">
+				<div class="next-arrow right-next" onclick="nextProject('yelpdemo')">
+					<i class="fas fa-angle-right fa-7x"></i>
+				</div>
+				<div class="next-arrow left-next" onclick="prevProject('yelpdemo')">
+					<i class="fas fa-angle-left fa-7x"></i>
+				</div>
+				<div class="display-box" onclick="navToProject('yelpdemo')">
+					<div class="display-box__textbox">
+						<h3 class="project-title">YelpDemo</h3>
+						<p class="project-key">CSS3, SASS, HTML5</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-box" id="little-things">
+				<div class="next-arrow right-next" onclick="nextProject('little-things')">
+					<i class="fas fa-angle-right fa-7x"></i>
+				</div>
+				<div class="next-arrow left-next" onclick="prevProject('little-things')">
+					<i class="fas fa-angle-left fa-7x"></i>
+				</div>
+				<div class="display-box" onclick="navToProject('little-things')">
+					<div class="display-box__textbox">
+						<h3 class="project-title">little-things</h3>
+						<p class="project-key">CSS3, SASS, HTML5</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 

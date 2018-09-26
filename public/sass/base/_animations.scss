@@ -1,0 +1,144 @@
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+	40% {
+    transform: translateY(-2rem);
+  }
+	60% {
+    transform: translateY(-1rem);
+  }
+}
+
+@keyframes bounce-left {
+	0%, 20%, 50%, 80%, 100% {
+    transform: translateX(0);
+  }
+	40% {
+    transform: translateX(-2rem);
+  }
+	60% {
+    transform: translateX(-1rem);
+  }
+}
+
+@keyframes bounce-right {
+	0%, 20%, 50%, 80%, 100% {
+    transform: translateX(0);
+  }
+	40% {
+    transform: translateX(2rem);
+  }
+	60% {
+    transform: translateX(1rem);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes draw {
+  
+  100% {
+    stroke-dashoffset: 0;
+  }
+  
+}
+
+@keyframes fly-cycle {
+  
+  100% {
+    background-position: -900px 0;
+  }
+  
+}
+
+@keyframes fly-right-one {
+  
+  0% {
+    transform: scale(0.3) translateX(-10vw);
+  }
+  
+  10% {
+    transform: translateY(2vh) translateX(10vw) scale(0.4);
+  }
+  
+  20% {
+    transform: translateY(0vh) translateX(30vw) scale(0.5);
+  }
+  
+  30% {
+    transform: translateY(4vh) translateX(50vw) scale(0.6);
+  }
+  
+  40% {
+    transform: translateY(2vh) translateX(70vw) scale(0.6);
+  }
+  
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.6);
+  }
+  
+  60% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+  
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+  
+}
+
+@keyframes fly-right-two {
+  
+  0% {
+    transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+  }
+  
+  10% {
+    transform: translateY(0vh) translateX(10vw) scale(0.4);
+  }
+  
+  20% {
+    transform: translateY(-4vh) translateX(30vw) scale(0.6);
+  }
+  
+  30% {
+    transform: translateY(1vh) translateX(50vw) scale(0.45);
+  }
+  
+  40% {
+    transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+  }
+  
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.45);
+  }
+  
+  51% {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+  
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+  
+}
+
+
+

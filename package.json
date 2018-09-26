@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
-    "compile:sass": "node-sass public/sass/main.scss public/stylesheets/style.css -w"
+    "compile:sass": "node-sass public/sass/main.scss public/stylesheets/style.css",
+    "watch:sass": "nodemon -e scss -x \"npm run compile:sass\""
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -13,9 +14,9 @@
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "jquery": "^3.3.1",
-    "mongoose": "^5.2.15",
+    "mongoose": "^5.2.17",
     "morgan": "~1.9.0",
-    "node": "^10.10.0",
+    "node": "^10.11.0",
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {

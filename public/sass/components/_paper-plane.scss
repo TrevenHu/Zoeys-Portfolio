@@ -1,0 +1,47 @@
+/* I believe I can... */
+@keyframes fly {
+    0% {
+        transform: perspective(1000px) rotateY(270deg) translateX(-50vh) translateY(-50%) translateZ(50vw); 
+    }
+    75% {
+        transform: perspective(1000px) rotateY(-810deg) translateX(50vh) translateY(50%) translateZ(0);
+    }
+}
+.container-plane {
+    position: absolute;
+    top: 20%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 10vh;
+    height: 10vh;
+    transform: rotateY(-90deg);
+    transform-style:preserve-3d;
+    transition: .5s;
+    z-index: 1000;
+    animation: fly 5s ease-out;
+}
+#rside {
+    margin-top: -5vh;
+    border-top: 5vh solid transparent;
+    border-right: 10vh solid #ececec;
+    transform: rotate(-5deg) rotateY(0deg) rotateX(10deg);
+    transform-origin: bottom;
+}
+#lwing {
+    margin-top: -5vh;
+    border-bottom: 5vh solid #f5f5f5;
+    border-right: 6vh solid transparent;
+    border-left: 10vh solid transparent;
+    transform: rotate(-22deg) rotateX(55deg) rotateY(-10deg) rotateZ(25deg);
+    transform-origin: top;
+}
+#rwing {
+    margin-top:-5vh;
+    border-bottom: 5vh solid #f5f5f5;
+    border-right: 6vh solid transparent;
+    border-left: 10vh solid transparent;
+    transform: rotate(-22deg) rotateX(-55deg) rotateY(10deg) rotateZ(25deg);
+    transform-origin: top;
+}

@@ -1,0 +1,105 @@
+.display-box{
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(#000, .2);
+    height: 50rem;
+    width: 80%;
+    margin: 1rem auto;
+    cursor: pointer;
+    backface-visibility: hidden;
+
+    &:hover &__textbox{
+    	color: #fff;
+    }
+
+    &__textbox{
+    	padding: 20rem 0;
+    	color: #000;
+    	text-align: center;
+    	width: 40%;
+    }
+}
+
+.project-title{
+	font-size: 3rem;
+}
+
+.project-key{
+	font-size: 1.5rem;
+}
+
+.next-arrow{
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.right-next{
+    right: 5rem;
+    animation: bounce-right 2s infinite;
+}
+
+.left-next{
+    left: 5rem;
+    animation: bounce-left 2s infinite;
+}
+
+#natours{
+    display: none;
+    &> .display-box{
+        background-image: linear-gradient(105deg,
+            rgba(#fff, .9) 0%, 
+            rgba(#fff, .9) 43.5%,
+            transparent 43.5%),
+        url(../images/natours.png);
+    }
+    &> .display-box:hover{
+        background-image: linear-gradient(105deg,
+            rgba($color-yellow-laguna, .9) 0%, 
+            rgba($color-yellow-laguna, .9) 43.5%,
+            transparent 43.5%),
+        url(../images/natours.png);
+    }
+}
+
+#yelpdemo {
+    display: none;
+    &> .display-box{
+        background-image: linear-gradient(105deg,
+            rgba(#fff, .9) 0%, 
+            rgba(#fff, .9) 43.5%,
+            transparent 43.5%),
+        url(../images/yelp.png);
+    }
+    &> .display-box:hover{
+        background-image: linear-gradient(105deg,
+            rgba($color-blue-cornflower, .9) 0%, 
+            rgba($color-blue-cornflower, .9) 43.5%,
+            transparent 43.5%),
+        url(../images/yelp.png);
+    }
+}
+
+
+
+#little-things{
+    display: none;
+     &> .display-box{
+        background-image: linear-gradient(105deg,
+            rgba(#fff, .9) 0%, 
+            rgba(#fff, .9) 43.5%,
+            transparent 43.5%),
+        url(../images/little-things.png);
+    }
+    &> .display-box:hover{
+        background-image: linear-gradient(105deg,
+            rgba($color-yellow-laguna, .9) 0%, 
+            rgba($color-yellow-laguna, .9) 43.5%,
+            transparent 43.5%),
+        url(../images/little-things.png);
+    }
+}
+
+
+

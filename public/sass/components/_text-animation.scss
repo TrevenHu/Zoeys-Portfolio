@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+.container {
+	display: flex;
+	position: relative;
+	min-height: 100vh;
+	
+	svg {
+		width: 100%;
+		height: auto;
+		fill: none;
+		stroke: white;
+		stroke-width: 4;
+		
+		tspan > tspan {
+			stroke-dasharray: 1500;
+			stroke-dashoffset: -1500;
+			
+			@for $i from 1 through 26 {
+				
+				&:nth-of-type(#{$i}) {
+					animation: draw 300ms #{$i * 150}ms forwards;
+				}
+				
+			}
+			
+		}
+		
+	}
+}
+
+#name{
+	position: absolute;
+	top: 10rem;
+	left: 50%;
+	transform: translateX(-35%);
+}
+
+#intro{
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translateX(-38%);
+}
