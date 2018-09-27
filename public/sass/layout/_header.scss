@@ -16,8 +16,13 @@
 		overflow: hidden;
 
 		&--front{
-			background-color: $color-blue-cornflower;
 			background-position: top;
+			background-image: linear-gradient(
+				to right bottom,
+				rgba(#0080FF,0.8),
+				rgba(#0080FF,0.8)),
+			url(./../images/bg-3.jpg);
+			background-size: cover;
 		}
 
 		&--back{
@@ -77,17 +82,6 @@
 	}
 }
 
-.heading-slogan{
-	font-size: 10rem;
-	color: white;
-	max-width: 80%;
-}
-
-.heading-slogan--yellow{
-	font-size: 10rem;
-	max-width: 40%;
-	color:$color-yellow-bumblebee;
-}
 
 .heading-intro{
 	color: white;
@@ -97,13 +91,6 @@
 	text-align: center;
 }
 
-.who{
-	position: absolute;
-	right: 8rem;
-	font-size: 3rem;
-	font-weight: 700;
-	cursor: pointer;
-}
 
 .flip-arrow{
 	position: absolute;
@@ -136,6 +123,16 @@
 
 .bounce {
 	animation: bounce 2s infinite;
+}
+
+.aboutme{
+	position: absolute;
+	left: 50%;
+	top: 57%;
+	transform: translate(-50%,-50%);
+	color:#fff;
+	font-family: 'Bree Serif', serif;
+	animation: 5s delayshow forwards ease-out;
 }
 
 

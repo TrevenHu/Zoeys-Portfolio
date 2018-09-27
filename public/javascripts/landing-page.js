@@ -1,17 +1,30 @@
-function changeTextOver(){
-	document.getElementsByClassName('header__side--front')[0].style.cssText = 'transform:rotateY(-180deg);';
-	document.getElementsByClassName('header__side--back')[0].style.cssText = 'transform:rotateY(0deg);';
+function changeTextOver(x){
+	if(x === 'about'){
+		document.getElementsByClassName('logo')[0].style.cssText = 'opacity:1; animation: flyIn 2s forwards;'
+		document.getElementsByClassName('header__side--front')[0].style.cssText = 'transform:rotateY(-180deg);';
+		document.getElementsByClassName('header__side--back')[0].style.cssText = 'transform:rotateY(0deg);';
+	} else if(x === 'home'){
+		document.getElementsByClassName('logo')[0].style.cssText = 'opacity:0;'
+		document.getElementsByClassName('header__side--front')[0].style.cssText = 'transform:rotateY(0);';
+		document.getElementsByClassName('header__side--back')[0].style.cssText = 'transform:rotateY(180deg);';
+	}
+	
 }
 
-function smoothScroll(){
-	var anchor = document.getElementsByClassName('section-project')[0];
-	anchor.style.cssText = 'display:block;';
-	document.getElementById('anchor-natours').className = 'current';
-	document.getElementById('anchor-yelpdemo').className = '';
-	document.getElementById('anchor-little-things').className = '';
-	document.getElementById('natours').style.cssText = 'display:block;'
-	document.getElementById('yelpdemo').style.cssText = 'display:none;'
-	document.getElementById('little-things').style.cssText = 'display:none;'
+function smoothScroll(x){
+    
+	if(x === 'about'){
+		changeTextOver(x);
+	} else if(x === 'projects'){
+		var anchor = document.getElementsByClassName('section-project')[0];
+		anchor.style.cssText = 'display:block;';
+		document.getElementById('anchor-natours').className = 'current';
+		document.getElementById('anchor-yelpdemo').className = '';
+		document.getElementById('anchor-little-things').className = '';
+		document.getElementById('natours').style.cssText = 'display:block;'
+		document.getElementById('yelpdemo').style.cssText = 'display:none;'
+		document.getElementById('little-things').style.cssText = 'display:none;'
+	}
 	anchor.scrollIntoView({behavior:"smooth"});
 }
 

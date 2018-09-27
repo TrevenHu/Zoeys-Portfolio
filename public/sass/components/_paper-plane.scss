@@ -1,26 +1,23 @@
-/* I believe I can... */
-@keyframes fly {
-    0% {
-        transform: perspective(1000px) rotateY(270deg) translateX(-50vh) translateY(-50%) translateZ(50vw); 
-    }
-    75% {
-        transform: perspective(1000px) rotateY(-810deg) translateX(50vh) translateY(50%) translateZ(0);
-    }
-}
+
 .container-plane {
     position: absolute;
-    top: 20%;
+    top: 18%;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
     width: 10vh;
     height: 10vh;
-    transform: rotateY(-90deg);
+    transform: rotateY(135deg);
     transform-style:preserve-3d;
     transition: .5s;
-    z-index: 1000;
+    z-index: 10;
     animation: fly 5s ease-out;
+    cursor: pointer;
+
+    &:hover{
+        transform: rotateY(75deg);
+    }
 }
 #rside {
     margin-top: -5vh;
@@ -45,3 +42,4 @@
     transform: rotate(-22deg) rotateX(-55deg) rotateY(10deg) rotateZ(25deg);
     transform-origin: top;
 }
+

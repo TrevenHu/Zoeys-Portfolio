@@ -45,6 +45,33 @@ a {
   60% {
     transform: translateX(-1rem); } }
 
+@keyframes scale-small {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes flyIn {
+  0% {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%; }
+  100% {
+    visibility: visible;
+    left: 2rem;
+    top: 7rem; } }
+
+@keyframes delayshow {
+  0%, 99% {
+    visibility: hidden;
+    opacity: 0; }
+  100% {
+    visibility: visible;
+    opacity: 1; } }
+
 @keyframes bounce-right {
   0%, 20%, 50%, 80%, 100% {
     transform: translateX(0); }
@@ -109,6 +136,12 @@ a {
   100% {
     transform: translateY(0vh) translateX(110vw) scale(0.45); } }
 
+@keyframes fly {
+  0% {
+    transform: perspective(1000px) rotateY(270deg) translateX(-50vh) translateY(-50%) translateZ(50vw); }
+  75% {
+    transform: perspective(1000px) rotateY(-810deg) translateX(50vh) translateY(50%) translateZ(0); } }
+
 .header {
   height: 100vh;
   width: 100%;
@@ -123,8 +156,9 @@ a {
     backface-visibility: hidden;
     overflow: hidden; }
     .header__side--front {
-      background-color: #6593F5;
-      background-position: top; }
+      background-position: top;
+      background-image: linear-gradient(to right bottom, rgba(0, 128, 255, 0.8), rgba(0, 128, 255, 0.8)), url(./../images/bg-3.jpg);
+      background-size: cover; }
     .header__side--back {
       transform: rotateY(180deg);
       background-image: linear-gradient(to right bottom, rgba(252, 226, 5, 0.8), rgba(248, 228, 115, 0.8)), url(./../images/bg-4.jpg);
@@ -161,29 +195,12 @@ a {
     text-align: center;
     font-family: 'Bree Serif', serif; }
 
-.heading-slogan {
-  font-size: 10rem;
-  color: white;
-  max-width: 80%; }
-
-.heading-slogan--yellow {
-  font-size: 10rem;
-  max-width: 40%;
-  color: #FCE205; }
-
 .heading-intro {
   color: white;
   font-family: 'Bree Serif', serif;
   font-size: 5rem;
   font-weight: 700;
   text-align: center; }
-
-.who {
-  position: absolute;
-  right: 8rem;
-  font-size: 3rem;
-  font-weight: 700;
-  cursor: pointer; }
 
 .flip-arrow {
   position: absolute;
@@ -211,6 +228,15 @@ a {
 
 .bounce {
   animation: bounce 2s infinite; }
+
+.aboutme {
+  position: absolute;
+  left: 50%;
+  top: 57%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: 'Bree Serif', serif;
+  animation: 5s delayshow forwards ease-out; }
 
 .navigation__checkbox {
   display: none; }
@@ -518,27 +544,23 @@ a {
     animation-duration: 16s;
     animation-delay: 10.25s; }
 
-/* I believe I can... */
-@keyframes fly {
-  0% {
-    transform: perspective(1000px) rotateY(270deg) translateX(-50vh) translateY(-50%) translateZ(50vw); }
-  75% {
-    transform: perspective(1000px) rotateY(-810deg) translateX(50vh) translateY(50%) translateZ(0); } }
-
 .container-plane {
   position: absolute;
-  top: 20%;
+  top: 18%;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
   width: 10vh;
   height: 10vh;
-  transform: rotateY(-90deg);
+  transform: rotateY(135deg);
   transform-style: preserve-3d;
   transition: .5s;
-  z-index: 1000;
-  animation: fly 5s ease-out; }
+  z-index: 10;
+  animation: fly 5s ease-out;
+  cursor: pointer; }
+  .container-plane:hover {
+    transform: rotateY(75deg); }
 
 #rside {
   margin-top: -5vh;
@@ -562,3 +584,116 @@ a {
   border-left: 10vh solid transparent;
   transform: rotate(-22deg) rotateX(-55deg) rotateY(10deg) rotateZ(25deg);
   transform-origin: top; }
+
+.hover-btn {
+  background: transparent;
+  position: absolute;
+  bottom: 1rem;
+  font-size: 2rem; }
+  .hover-btn__about {
+    left: 9%; }
+  .hover-btn__projects {
+    left: 25%; }
+  .hover-btn__designs {
+    left: 45%; }
+  .hover-btn__resume {
+    left: 63%; }
+  .hover-btn__contact {
+    left: 80%; }
+  .hover-btn a {
+    color: white;
+    padding: 0.4em calc(0.4em * 1.2);
+    display: inline-block;
+    border: 3px solid transparent;
+    position: relative;
+    font-size: 1.2em;
+    cursor: pointer;
+    letter-spacing: 0.07em; }
+    .hover-btn a .text {
+      font-family: proxima-nova, monospace;
+      transform: translate3d(0, 0.4em, 0);
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s; }
+    .hover-btn a:after {
+      position: absolute;
+      content: '';
+      bottom: -3px;
+      left: calc(0.4em * 1.2);
+      right: calc(0.4em * 1.2);
+      height: 3px;
+      background: #fff;
+      transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+      transform-origin: left; }
+  .hover-btn .line {
+    position: absolute;
+    background: #fff; }
+    .hover-btn .line.-right, .hover-btn .line.-left {
+      width: 3px;
+      bottom: -3px;
+      top: -3px;
+      transform: scale3d(1, 0, 1); }
+    .hover-btn .line.-top, .hover-btn .line.-bottom {
+      height: 3px;
+      left: -3px;
+      right: -3px;
+      transform: scale3d(0, 1, 1); }
+    .hover-btn .line.-right {
+      right: -3px;
+      transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+      transform-origin: top; }
+    .hover-btn .line.-top {
+      top: -3px;
+      transition: transform 0.08s linear 0.43s;
+      transform-origin: left; }
+    .hover-btn .line.-left {
+      left: -3px;
+      transition: transform 0.08s linear 0.51s;
+      transform-origin: bottom; }
+    .hover-btn .line.-bottom {
+      bottom: -3px;
+      transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+      transform-origin: right; }
+  .hover-btn a:hover .text,
+  .hover-btn a:active .text {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s; }
+  .hover-btn a:hover:after,
+  .hover-btn a:active:after {
+    transform: scale3d(0, 1, 1);
+    right: -3px;
+    left: -3px;
+    transform-origin: right;
+    transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s; }
+  .hover-btn a:hover .line,
+  .hover-btn a:active .line {
+    transform: scale3d(1, 1, 1); }
+    .hover-btn a:hover .line.-right,
+    .hover-btn a:active .line.-right {
+      transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+      transform-origin: bottom; }
+    .hover-btn a:hover .line.-top,
+    .hover-btn a:active .line.-top {
+      transition: transform 0.08s linear 0.4s;
+      transform-origin: right; }
+    .hover-btn a:hover .line.-left,
+    .hover-btn a:active .line.-left {
+      transition: transform 0.08s linear 0.48s;
+      transform-origin: top; }
+    .hover-btn a:hover .line.-bottom,
+    .hover-btn a:active .line.-bottom {
+      transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+      transform-origin: left; }
+
+.logo {
+  position: absolute;
+  left: 2rem;
+  top: 7rem;
+  width: 10vh;
+  height: 10vh;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 100;
+  transform: translate(0, 0) rotateY(75deg);
+  transform-style: preserve-3d; }
+  .logo:hover {
+    transform: translate(0, 0) rotateY(135deg); }

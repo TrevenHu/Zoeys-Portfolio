@@ -19,21 +19,7 @@ block navigation
 block landing-header
 	<header class="header">
 		<div class="header__side header__side--front">
-			<!-- <div class="header__text-box header__text-box--left">
-				<h1 class="heading-slogan u-margin-left-neg">Ziyue Hu</h1>
-				<h1 class="heading-slogan--yellow u-margin-left-neg">Not</h1>
-				<h1 class="heading-slogan--yellow u-margin-left-neg">Your Average</h1>
-				<h1 class="heading-slogan u-margin-left-neg">Software Engineer</h1>
-			</div>
-			<div class="header__text-box header__text-box--right">
-				<h1 class="heading-slogan">Ziyue</h1>
-				<h1 class="heading-slogan--yellow">Not</h1>
-				<h1 class="heading-slogan--yellow">Your Average</h1>
-				<h1 class="heading-slogan">Software Engineer</h1>
-			</div> -->
-
 			<div class="container">
-	
 				<div class="bird-container bird-container--one">
 					<div class="bird bird--one"></div>
 				</div>
@@ -65,7 +51,7 @@ block landing-header
 						</text>
 					</g>
 				</svg>
-				<div class="container-plane" onClick="changeTextOver()">
+				<div class="container-plane" onClick="changeTextOver('about')">
 					<div id="lside"></div>
 					<div id="rside"></div>
 					<div id="lwing"></div>
@@ -107,12 +93,14 @@ block landing-header
 					</g>
 				</svg>
 			</div>
-
-
-
-
 		</div>
 		<div class="header__side header__side--back">
+			<div class="logo" onClick="changeTextOver('home')">
+					<div id="lside"></div>
+					<div id="rside"></div>
+					<div id="lwing"></div>
+					<div id="rwing"></div>
+			</div>
 			<div class="header__intro-box">
 				<h1 class="heading-intro">Hi. I'm Ziyue</h1>
 				<h1 class="heading-intro">a graduate student at UC San Diego</h1>
@@ -123,7 +111,51 @@ block landing-header
 				<p class="introduction">I'm passionate about building easy to use, user-friendly websites and applications. My best assets are my creativity, my feeling with technology and my passion. </p>
 			</div>
 		</div>
-		<div class="next-page-arrow" onclick="smoothScroll()"><i class="bounce fas fa-angle-down fa-3x"></i></div>
+		<section class="hover-btn hover-btn__about" onclick="smoothScroll('about')" >
+			<a>
+				<span class="text">About</span>
+				<span class="line -right"></span>
+				<span class="line -top"></span>
+				<span class="line -left"></span>
+				<span class="line -bottom"></span>
+			</a>
+		</section>
+		<section class="hover-btn hover-btn__projects" onclick="smoothScroll('projects')">
+			<a>
+				<span class="text">Projects</span>
+				<span class="line -right"></span>
+				<span class="line -top"></span>
+				<span class="line -left"></span>
+				<span class="line -bottom"></span>
+			</a>
+		</section>
+		<section class="hover-btn hover-btn__designs" onclick="smoothScroll('designs')">
+			<a>
+				<span class="text">Designs</span>
+				<span class="line -right"></span>
+				<span class="line -top"></span>
+				<span class="line -left"></span>
+				<span class="line -bottom"></span>
+			</a>
+		</section>
+		<section class="hover-btn hover-btn__resume" onclick="smoothScroll('resume')">
+			<a>
+				<span class="text">Resume</span>
+				<span class="line -right"></span>
+				<span class="line -top"></span>
+				<span class="line -left"></span>
+				<span class="line -bottom"></span>
+			</a>
+		</section>
+		<section class="hover-btn hover-btn__contact" onclick="smoothScroll('contact')">
+			<a>
+				<span class="text">Contact</span>
+				<span class="line -right"></span>
+				<span class="line -top"></span>
+				<span class="line -left"></span>
+				<span class="line -bottom"></span>
+			</a>
+		</section>
 	</header>
 block section-project
 	<main>

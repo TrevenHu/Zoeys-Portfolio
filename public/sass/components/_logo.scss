@@ -1,0 +1,16 @@
+.logo{
+	position: absolute;
+	left:2rem;
+	top:7rem;
+	width: 10vh;
+    height: 10vh;
+    opacity: 0;
+ 	cursor: pointer;
+ 	z-index: 100;
+ 	transform: translate(0,0) rotateY(75deg);
+ 	transform-style:preserve-3d;
+
+    &:hover{
+    	 transform: translate(0,0) rotateY(135deg);
+    }
+}
